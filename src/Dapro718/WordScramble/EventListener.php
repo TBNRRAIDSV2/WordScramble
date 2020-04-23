@@ -27,21 +27,22 @@ class EventListener implements Listener {
   }
   
   public function onChat(PlayerChatEvent $event) {
-    $this->plugin->getServer()->broadcastMessage("Chat Event Activated");
+    $this->plugin->getServer()->info("Chat Event Activated");
     $scrambledWord = $this->plugin->sWord;
     $correctWord = $this->plugin->cWord;
-    $this->plugin->getServer()->broadcastMessage("Scrambled is: $scrambledWord");
-    $this->plugin->getServer()->broadcastMessage("Correct is: $correctWord");
+    $this->plugin->getLogger()->info("Scrambled is: $scrambledWord");
+    $this->plugin->getLogger()->info("Correct is: $correctWord");
     $player = $event->getPlayer();
     $money = $this->plugin->pMoney;
     $message = strtolower($event->getMessage());
-    $this->plugin->getServer()->broadcastMessage("Players message is: $message");
+    $this->plugin->getLogger()->info("Players message is: $message");
     if($event->getPlayer() instanceof Player) {
-      $this->plugin->getServer()->broadcastMessage("Player is $player and is an instance of Player");
+      $this->plugin->getLogger()->info("Player is $player and is an instance of Player");
       if($correctWord !== "closed902312409") {
-        $this->plugin->getServer()->broadcastMessage("Word is open");
+        $this->plugin->getLogger()->info("Word is open");
+        $this->plugin->getLogger()->info("$message = $scrambleWord");
         if($message === $scrambledWord) {
-          $this->plugin->getServer()->broadcastMessage("message is correct, things should happen");
+          $this->plugin->getLogger()->info("message is correct, things should happen");
           EconomyAPI::getInstance()->addMoney($player, $money);
           $this->plugin->getServer()->broadcastMessage("§e{$player} §2has unscrambled §e{$correctWord} §2from §2{$scrambledWord} and got §e\${$money}§2!");
           $this->plugin->closeWord();

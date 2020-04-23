@@ -1,0 +1,6 @@
+name: WordScramble
+description: Sends a scrambled word in chat for players to unscramble.
+main: Dapro718\WordScramble\Main
+version: 0.0.1
+api: 3.12.0
+author: Dapro718

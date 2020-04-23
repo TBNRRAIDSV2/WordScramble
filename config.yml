@@ -1,0 +1,32 @@
+# Word Scrambler plugin for PM servers.
+# DM Dapro#3132 if you need any help.
+
+# Imperial Network
+# Ip: play-imperialpe.xyz
+# Port: 19132
+# Discord: https://discord.gg/GdtwwuG
+# Website: imperialpe.xyz
+
+# The amount of time between scrambled words. (In seconds).
+repeat-interval: 180
+
+# The minimum amount of money a player can get for unscrambling a word.
+min-money: 1000
+
+# The maximum amount of money a player can get for unscrambling a word.
+max-money: 3000
+
+# List of words to be scrambled.
+words:
+  - minecraft
+  - villager
+  - enderman
+  - zombie
+  - creative
+  - survival
+  - nether
+  - grass
+  - cow
+  - sheep
+  - realm
+  - phantom

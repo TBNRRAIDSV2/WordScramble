@@ -40,7 +40,7 @@ class EventListener implements Listener {
       $this->plugin->getLogger()->info("Player is $player and is an instance of Player");
       if($correctWord !== "closed902312409") {
         $this->plugin->getLogger()->info("Word is open");
-        $this->plugin->getLogger()->info("$message = $scrambleWord");
+        $this->plugin->getLogger()->info("$message = $scrambledWord");
         if($message === $scrambledWord) {
           $this->plugin->getLogger()->info("message is correct, things should happen");
           EconomyAPI::getInstance()->addMoney($player, $money);

@@ -33,8 +33,8 @@ class Main extends PluginBase implements Listener {
     $this->sTask = $this->getScheduler()->scheduleRepeatingTask(new ScrambleTask($this), $interval);
     $economyapi = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
     if($economyapi === null) {
-      $this->getServer()->getlogger->error("Depedency 'EconomyAPI' not found. Disabling plugin...");
-      $this->getServer()->getPluginManager->disablePlugin("WordScramble");
+      $this->getServer()->getlogger()->error("Depedency 'EconomyAPI' not found. Disabling plugin...");
+      $this->getServer()->getPluginManager()->disablePlugin("WordScramble");
     }
   }
   

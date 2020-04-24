@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener {
     $economyapi = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
     if($economyapi === null) {
       $this->getServer()->getlogger()->error("Depedency 'EconomyAPI' not found. Disabling plugin...");
-      $this->getServer()->getPluginManager()->disablePlugin("WordScramble");
+      $this->getServer()->getPluginManager()->disablePlugin(Plugin "WordScramble");
     }
   }
   

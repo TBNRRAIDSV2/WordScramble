@@ -30,6 +30,11 @@ class Main extends PluginBase implements Listener {
     $this->config = $this->getConfig();
     $interval = $this->config->get("repeat-interval") * 20;
     $this->sTask = $this->getScheduler()->scheduleRepeatingTask(new ScrambleTask($this), $interval);
+    $economyapi = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
+    if($economyapi === null) {
+      $this->getServer()->getlogger->error("Depedency 'EconomyAPI' not found. Disabling plugin...");
+      $this->getServer()->getPluginManager->disablePlugin("WordScramble");
+    }
   }
   
   public function chooseWord() {
@@ -59,7 +64,7 @@ class Main extends PluginBase implements Listener {
   }
   
   public function closeWord() {
-    $this->sword = "closed902312409";
-    $this->cword = "closed902312409";
+    $this->sWord = "closed902312409";
+    $this->cWord = "closed902312409";
   } 
 }

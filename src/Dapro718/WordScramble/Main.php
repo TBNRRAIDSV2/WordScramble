@@ -11,7 +11,6 @@ use pocketmine\Server;
 use pocketmine\Server\PluginLogger;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
-use pocketmine\plugin\Plugin;
 use pocketmine\utils\Config;
 use pocketmine\scheduler\TaskHandler;
 use pocketmine\scheduler\Task;

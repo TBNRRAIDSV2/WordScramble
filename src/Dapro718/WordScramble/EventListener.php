@@ -33,7 +33,7 @@ class EventListener implements Listener {
   #  $this->plugin->getLogger()->info("Scrambled is: $scrambledWord");
   #  $this->plugin->getLogger()->info("Correct is: $correctWord");
     $player = $event->getPlayer();
-    $displayname = $event->getPlayer()->getDisplayName;
+    $displayname = $event->getPlayer()->getDisplayName();
     $money = $this->plugin->pMoney;
     $message = strtolower($event->getMessage());
   #  $this->plugin->getLogger()->info("Players message is: $message");

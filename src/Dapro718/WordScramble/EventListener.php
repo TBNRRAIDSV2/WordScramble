@@ -33,6 +33,7 @@ class EventListener implements Listener {
   #  $this->plugin->getLogger()->info("Scrambled is: $scrambledWord");
   #  $this->plugin->getLogger()->info("Correct is: $correctWord");
     $player = $event->getPlayer();
+    $displayname = $event->getPlayer()->getDisplayName;
     $money = $this->plugin->pMoney;
     $message = strtolower($event->getMessage());
   #  $this->plugin->getLogger()->info("Players message is: $message");
@@ -44,7 +45,7 @@ class EventListener implements Listener {
         if($message === $correctWord) {
      #     $this->plugin->getLogger()->info("message is correct, things should happen");
           EconomyAPI::getInstance()->addMoney($player, $money);
-          $this->plugin->getServer()->broadcastMessage("§e{$player} §2has unscrambled §e{$correctWord} §2from §2{$scrambledWord} and got §e\${$money}§2!");
+          $this->plugin->getServer()->broadcastMessage("§e{$displayname} §2has unscrambled §e{$correctWord} §2from §2{$scrambledWord} and got §e\${$money}§2!");
           $this->plugin->closeWord();
         }
       } else {

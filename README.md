@@ -4,12 +4,14 @@ This plugin sends a unscrambled word in chat, and has players unscramble it. The
 # Features
 
 ### Current Features:
-\
+
+
 - Custom word support.
 - Editable reward.
 - Editable word scramble interval.
-\
-\
+
+
+
 ### Planned Addons:
 
 There are no planned addons for this plugin. If you want to see something added, send me a message on Discord at Dapro#3132.
@@ -18,7 +20,8 @@ There are no planned addons for this plugin. If you want to see something added,
 1. Download the plugin.
 2. Upload it to the `Plugins` folder.
 3. Restart your server.
-\
+
+
 4. Edit config to your preferences.
 5. Always restart your server after editing configs.
 
@@ -64,8 +67,10 @@ words:
   - realm
   - phantom
 ```
-\
-\
+
+
+
+
 | Setting | Description |
 | --- | --- |
 | `repeat-interval` | Set of fast a word is sent in chat. Interval is in seconds. |

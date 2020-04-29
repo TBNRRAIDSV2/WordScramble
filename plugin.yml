@@ -4,3 +4,10 @@ main: Dapro718\WordScramble\Main
 version: 0.0.1
 api: 3.12.0
 author: Dapro718
+permissions:
+  wordscramble.deny:
+    default: false
+    description: Players with this permission cannot unscramble words.
+  wordscramble.bonus:
+    default: false
+    description: Players with this permission get extra money when they unscramble a word.
